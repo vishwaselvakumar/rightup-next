@@ -1,5 +1,5 @@
 import Image from "next/image";
-import gif from "@/public/icons/rightupnext.gif"; // Importing the GIF
+import gif from "@/public/icons/gifs.gif"; // Importing the GIF
 
 export default function Gifs() {
   return (

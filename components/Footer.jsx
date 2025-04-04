@@ -2,15 +2,9 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 import { FiGitBranch } from "react-icons/fi";
 import { FaRegStar } from "react-icons/fa";
-import LinkedIn from "../public/icons/linkedin@2x.png";
-import GitHub from "../public/icons/github@2x.png";
-import Behance from "../public/icons/behance@2x.png";
-import Instagram from "../public/icons/instagram@2x.png";
-import Gmail from "../public/icons/google@2x.png";
 import Image from "next/image";
-import Star from "@/public/Star.svg";
-import logo from "@/public/work/logo.png"
-import { DotLottieReact } from "@lottiefiles/dotlottie-react";
+
+import logo from "@/public/logos/partner/logo.png"
 
 const Footer = () => {
   const [metaData, setMetaData] = useState({ star: 0, forks: 0 });
@@ -37,72 +31,279 @@ const Footer = () => {
   return (
    <>
 
-
-
-{/* <div className="grid md:grid-cols-3 gap-6 min-h-[164px] py-8 p-32 bg-gradient-to-r from-blue-100 to-blue-200  overflow-hidden">
-  <div className="md:col-span-2">
-    <h1 className="text-3xl font-bold text-black">Contact  Us </h1>
-    <p className="text-7xl font-bold text-black mt-10">
-      Kick Start Your Business 
-    </p>
-    <p className="text-7xl font-bold text-black mt-4">
-      Today 
-    </p>
-   
-
-    <button
-className="relative inline-flex items-center justify-start px-6 py-3 overflow-hidden font-medium transition-all mt-10 bg-indigo-500 rounded-xl group">
-<span
-className="absolute top-0 right-0 inline-block w-4 h-4 transition-all duration-500 ease-in-out bg-indigo-700 rounded group-hover:-mr-4 group-hover:-mt-4">
-<span className="absolute top-0 right-0 w-5 h-5 rotate-45 translate-x-1/2 -translate-y-1/2 bg-white"></span>
-</span>
-<span
-className="absolute bottom-0 left-0 w-full h-full transition-all duration-500 ease-in-out delay-200 -translate-x-full translate-y-full bg-indigo-600 rounded-2xl group-hover:mb-12 group-hover:translate-x-0"></span>
-<span
-className="relative w-full text-base font-semibold text-left text-white transition-colors duration-200 ease-in-out group-hover:text-white"> Contact Us</span>
-</button>
-
-
-  </div>
-  <div className="relative max-md:hidden h-[350px] w-[500px]">
-  <DotLottieReact
-      src="https://lottie.host/4d751c65-882c-4346-8c11-98121150cd47/r9FrZ43h10.lottie"
-      loop
-      autoplay
-    />
-  </div>
-</div> */}
-
-
-
-
-   <footer className="w-full">
-  <div className="mx-auto max-w-7xl px-6 lg:px-8">
+<footer className="w-full bg-white">
+  <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
     {/*Grid*/}
-    <div className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-6 gap-4 lg:gap-8 py-14 max-w-xs mx-auto sm:max-w-2xl md:max-w-3xl lg:max-w-full">
-      <div className="col-span-full mb-10 lg:col-span-2 lg:mb-0">
-        <a
-          href=""
-          className="flex justify-center lg:justify-start"
-        >
-        <Image src={logo} alt="logo" width={200} height={200}/>
-        </a>
-        <h1 className="mt-5">Address</h1>
-        <p className="py-2 text-lg text-gray-500 lg:max-w-xs text-center lg:text-left">
-        315, Peelamedu Pudur, Sowri Palayam, Coimbatore, Tamil Nadu 641028, India
-        </p>
+    <div className="flex flex-col xl:flex-row gap-8 pt-14 pb-14">
+     
+    <div className="w-full xl:max-w-[265px] max-xl:mb-8 p-6 rounded-2xl shadow-lg border border-grey-500 bg-blue-500 relative overflow-hidden">
+  <div className="absolute inset-0 bg-gradient-to-b from-blue-50 to-blue-700 opacity-50 rounded-2xl pointer-events-none"></div>
+  <Link
+    href="/"
+    className="flex justify-center sm:justify-start border-b border-blue-500 mb-5 pb-5 items-center  relative"
+  >
+    <Image src={logo} alt="logo" className="w-28 brightness-125"/>
+  </Link>
+  <div className="flex max-xl:items-center max-xl:justify-between flex-col sm:flex-row xl:flex-col relative">
+    <p className="text-black text-sm mb-5 text-center lg:text-left leading-relaxed">
+      At <span className="font-semibold ">Right UpNext</span> At Right UpNext we empower businesses with innovative software solutions and strategic marketing Whether you are a startup looking to scale or an established brand aiming for greater impact we drive success through technology and creativity
+    </p>
+    <div className="flex max-xl:items-center gap-6 xl:flex-col">
+      <a href="javascript:;" className="flex justify-center lg:justify-start group w-max text-blue-400 hover:text-blue-300 transition duration-300">
+        {/* Social Icons or Links Here */}
+      </a>
+    </div>
+  </div>
+</div>
 
-     <h1>E Mail</h1>
-        <p className="py-2 text-lg text-gray-500 mb-5 lg:max-w-xs text-center lg:text-left">
-        rightupnext.innovations@gmail.com
+      <div className="grid grid-cols-2 sm:grid-cols-3 min-[890px]:grid-cols-5 lg:grid-cols-5 gap-4 xl:gap-8 w-full max-w-sm mx-auto sm:max-w-3xl min-[890px]:max-w-full">
+        <div className="w-full  text-left">
+          <h4 className="text-xl text-gray-900 font-medium mb-7">Quick Access</h4>
+          <ul className=" transition-all duration-500">
 
-        </p>
+            
+            <li className="mb-6">
+              <Link
+                href="/"
+                className="text-gray-600 hover:text-gray-900"
+              >
+                Home
+              </Link>
+            </li>
+            <li className="mb-6">
+              <Link
+                href="/about"
+                className=" text-gray-600 hover:text-gray-900"
+              >
+                About
+              </Link>
+            </li>
+            <li className="mb-6">
+              <Link
+                href="/tech"
+                className=" text-gray-600 hover:text-gray-900"
+              >
+              Tech
+              </Link>
+            </li>
+            <li className="mb-6">
+              <Link
+                href="/college"
+                className=" text-gray-600 hover:text-gray-900"
+              >
+           Studies
+              </Link>
+            </li>
+            <li className="mb-6">
+              <Link
+                href="/camara"
+                className=" text-gray-600 hover:text-gray-900"
+              >
+                Prolens 
+              </Link>
+            </li>
+          </ul>
+        </div>
+        {/*End Col*/}
+        <div className="w-full  text-left">
+          <h4 className="text-xl text-gray-900 font-medium mb-7">Services</h4>
+          <ul className=" transition-all duration-500">
+            <li className="mb-6">
+              <Link
+                href="/services/software"
+                className="text-gray-600 hover:text-gray-900"
+              >
+                Web Developement 
+              </Link>
+            </li>
+            <li className="mb-6">
+              <Link
+                href="/services/app"
+                className=" text-gray-600 hover:text-gray-900"
+              >
+                App Developemnt 
+              </Link>
+            </li>
+            <li className="mb-6">
+              <Link
+                href="/services/digital"
+                className=" text-gray-600 hover:text-gray-900"
+              >
+                Digital Marketing 
+              </Link>
+            </li>
+            <li className="mb-6">
+              <Link
+                href="/services/software"
+                className=" text-gray-600 hover:text-gray-900"
+              >
+              UI /UX 
+              </Link>
+            </li>
+            <li className="">
+              <Link
+                href="camara"
+                className=" text-gray-600 hover:text-gray-900"
+              >
+              Animation & Graphic 
+              </Link>
+            </li>
+          </ul>
+        </div>
+        {/*End Col*/}
+        <div className="w-full  text-left">
+          <h4 className="text-xl text-gray-900 font-medium mb-7">Products </h4>
+          <ul className="  transition-all duration-500">
+            <li className="mb-6">
+              <Link
+                href="timeline"
+                className="text-gray-600 hover:text-gray-900"
+              >
+                Billing Software
+              </Link>
+            </li>
+            <li className="mb-6">
+              <Link
+                href="/"
+                className=" text-gray-600 hover:text-gray-900"
+              >
+             
+             IMRS
+              </Link>
+            </li>
+            <li className="mb-6">
+              <Link
+                href="/"
+                className=" text-gray-600 hover:text-gray-900"
+              >
+               Whatsapp CRM 
+              </Link>
+            </li>
+            {/* <li className="mb-6">
+              <a
+                href="javascript:;"
+                className=" text-gray-600 hover:text-gray-900"
+              >
+                User Guide
+              </a>
+            </li> */}
+            {/* <li className="">
+              <a
+                href="javascript:;"
+                className=" text-gray-600 hover:text-gray-900"
+              >
+                Plugin Guide
+              </a>
+            </li> */}
+          </ul>
+        </div>
+        {/*End Col*/}
+
+
+
+
+        <div className="w-full text-left">
+          <h4 className="text-xl text-gray-900 font-medium mb-7">Support</h4>
+          <ul className="transition-all duration-500">
+            <li className="mb-6">
+              <Link
+                href="/"
+                className="text-gray-600 hover:text-gray-900"
+              >
+                Customer Support
+              </Link>
+            </li>
+            <li className="mb-6">
+              <Link
+                href="/"
+                className=" text-gray-600 hover:text-gray-900"
+              >
+                Cookies
+              </Link>
+            </li>
+            <li className="mb-6">
+              <Link
+                href="/"
+                className=" text-gray-600 hover:text-gray-900"
+              >
+                License
+              </Link>
+            </li>
+            <li className="mb-6">
+              <Link
+                href="/"
+                className=" text-gray-600 hover:text-gray-900"
+              >
+                Terms &amp; Conditions
+              </Link>
+            </li>
+            <li className="mb-6">
+              <Link
+                href="/"
+                className=" text-gray-600 hover:text-gray-900"
+              >
+                Privacy Policy
+              </Link>
+            </li>
+          </ul>
+        </div>
+
+
+
+
+        <div className="w-full text-left">
+          <h4 className="text-xl text-gray-900 font-medium mb-7">Contact</h4>
+          <ul className="transition-all duration-500">
+
+            <li className="mb-6">
+  <Link href="/" className="text-gray-600 hover:text-gray-900 block">
+    <span className="whitespace-nowrap">315, Peelamedu Pudur,</span><br />
+    Sowri Palayam,<br />
+    Coimbatore, 641028 <br />
+    India
+  </Link>
+</li>
+
+
+          
+
+
+           
+        
+
+            <li className="mb-6">
+              <Link
+                href="javascript:;"
+                className="text-gray-600 hover:text-gray-900"
+              >
+               +91 9159260221
+              </Link>
+            </li>
+
+
+           
+          </ul>
+        </div>
+        {/*End Col*/}
+      
+
+
+        {/*End Col*/}
+      </div>
+    </div>
+    {/*Grid*/}
+    <div className="py-7 border-t border-gray-200">
+      <div className="flex items-center justify-center flex-col sm:justify-between sm:flex-row">
+      <span className="text-sm text-gray-500 ">
+  © <Link href="/">Right UpNext</Link> {new Date().getFullYear()}, All rights reserved.
+</span>
+
 
 
         <div className="flex mt-4 space-x-4 justify-center lg:justify-start sm:mt-0 ">
           
           <a
-            href="https://www.linkedin.com/company/right-upnext-innovations/"
+            href="https://www.facebook.com/profile.php?id=61572541074172" target="_blank"
             className="w-9 h-9 rounded-full  flex justify-center items-center hover:bg-indigo-600"
           >
            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 93 92" fill="none">
@@ -112,7 +313,7 @@ className="relative w-full text-base font-semibold text-left text-white transiti
 
           </a>
           <a
-            href=""
+            href="https://www.instagram.com/rightupnxt?igsh=Nnp5ZXY3c3Q3anZt" target="_blank"
             className="w-9 h-9 rounded-full  flex justify-center items-center hover:bg-indigo-600"
           >
           <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 93 92" fill="none">
@@ -131,7 +332,7 @@ className="relative w-full text-base font-semibold text-left text-white transiti
       </svg>
           </a>
           <a
-            href="https://chat.whatsapp.com/9998988998"
+            href="https://wa.me/9159260221" target="_blank"
             className="w-9 h-9 rounded-full  flex justify-center items-center hover:bg-indigo-600"
           >
            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 93 92" fill="none">
@@ -141,7 +342,7 @@ className="relative w-full text-base font-semibold text-left text-white transiti
       </svg>
           </a>
           <a
-            href="https://www.linkedin.com/company/right-upnext-innovations/"
+            href="https://www.linkedin.com/company/right-upnext-innovations/" target="_blank"
             className="w-9 h-9 rounded-full  flex justify-center items-center hover:bg-indigo-600"
           >
          <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 93 93" fill="none">
@@ -154,209 +355,13 @@ className="relative w-full text-base font-semibold text-left text-white transiti
 
            
         </div>
-      </div>
-      {/*End Col*/}
-      <div className="lg:mx-auto text-center sm:text-left">
-        <h4 className="text-lg text-gray-900 font-bold mb-7">Right UpNext</h4>
-        <ul className="text-lg  transition-all duration-500">
-          <Link href={"/"}>
-          <li className="mb-6">
-            <a
 
-              className="text-gray-600 hover:text-gray-900"
-            >
-              Home
-            </a>
-          </li>
-          </Link>
 
-          <Link href={"/about"}>
-          <li className="mb-6">
-            <a
-              href="javascript:;"
-              className=" text-gray-600 hover:text-gray-900"
-            >
-              About
-            </a>
-          </li>
-          </Link>
-
-          <Link href={"/camara"}>
-          <li className="mb-6">
-            <a
-              href="javascript:;"
-              className=" text-gray-600 hover:text-gray-900"
-            >
-              Prolens
-            </a>
-          </li>
-          </Link>
-
-          <Link href={"/contact"}>
-          <li>
-            <a
-              href="javascript:;"
-              className=" text-gray-600 hover:text-gray-900"
-            >
-              Contact
-            </a>
-          </li>
-          </Link>
-
-         
-        </ul>
-      </div>
-      {/*End Col*/}
-      <div className="lg:mx-auto text-center sm:text-left">
-        <h4 className="text-lg text-gray-900 font-bold mb-7">Services</h4>
-        <ul className="text-lg  transition-all duration-500">
-
-          <Link href={"/services/software"}>
-          <li className="mb-6">
-            <a
-              href="javascript:;"
-              className="text-gray-600 hover:text-gray-900"
-            >
-              Software Discovery
-            </a>
-          </li>
-          </Link>
-
-          <Link href={"/services/app"}>
-          <li className="mb-6">
-            <a
-              href="javascript:;"
-              className=" text-gray-600 hover:text-gray-900"
-            >
-              App Development
-            </a>
-          </li>
-          </Link>
-
-          <Link href={"/services/digital"}>
-          <li className="mb-6">
-            <a
-              href="javascript:;"
-              className=" text-gray-600 hover:text-gray-900"
-            >
-              Digital Marketing
-            </a>
-          </li>
-          </Link>
-
-          <Link href={"/camara"}>
-          <li>
-            <a
-              href="javascript:;"
-              className=" text-gray-600 hover:text-gray-900"
-            >
-            Brand Shoots
-            </a>
-          </li>
-          </Link>
-        </ul>
-      </div>
-      {/*End Col*/}
-      <div className="lg:mx-auto text-center sm:text-left">
-        <h4 className="text-lg text-gray-900 font-bold mb-7">Resources</h4>
-        <ul className="text-lg  transition-all duration-500">
-          <Link href={"/work"}>
-          <li className="mb-6">
-            <a
-              href="javascript:;"
-              className="text-gray-600 hover:text-gray-900"
-            >
-              Work
-            </a>
-          </li>
-          </Link>
-          <Link href={"/tech"}>
-          <li className="mb-6">
-            <a
-              href="javascript:;"
-              className=" text-gray-600 hover:text-gray-900"
-            >
-             Tech
-            </a>
-          </li>
-          </Link>
-          <Link href={"/timeline"}>
-          <li className="mb-6">
-            <a
-              href="javascript:;"
-              className=" text-gray-600 hover:text-gray-900"
-            >
-            Products 
-            </a>
-          </li>
-          </Link>
-         
-        </ul>
-      </div>
-      {/*End Col*/}
-      <div className="lg:mx-auto text-center sm:text-left">
-        <h4 className="text-lg text-gray-900 font-medium mb-7">Contact</h4>
-        <ul className="text-lg  transition-all duration-500">
-          <li className="mb-6">
-            <a
-              href="javascript:;"
-              className="text-gray-600 hover:text-gray-900"
-            >
-             Phone -  6385557221
-            </a>
-          </li>
-          <li className="mb-6">
-            <a
-              href="javascript:;"
-              className=" text-gray-600 hover:text-gray-900"
-            >
-              Phone -  9159260221
-            </a>
-          </li>
-          <li className="mb-6">
-            <a
-              href="https://wa.me/9159260221" target="_blank"
-              className=" text-gray-600 hover:text-gray-900"
-            >
-              Whats App
-            </a>
-          </li>
-         
-        </ul>
-      </div>
-    </div>
-    {/*Grid*/}
-
-    
-    <div className="py-7 border-t border-gray-200">
-      <div className="flex items-center justify-center flex-col lg:justify-between lg:flex-row">
-       
-      <span className="text-sm text-gray-500 ">
-  ©<a href="https://pagedone.io/">Right UpNext Innovations  </a>
-  {new Date().getFullYear()}, All rights reserved.
-</span>
-
-        <ul className="flex items-center gap-9 mt-4 lg:mt-0">
-          <li>
-            <a href="javascript:;" className="text-sm text-gray-500">
-              Terms
-            </a>
-          </li>
-          <li>
-            <a href="javascript:;" className="text-sm text-gray-500">
-              Privacy
-            </a>
-          </li>
-          <li>
-            <a href="javascript:;" className="text-sm text-gray-500">
-            coookies
-            </a>
-          </li>
-        </ul>
       </div>
     </div>
   </div>
 </footer>
+
 
    </>
   );

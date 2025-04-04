@@ -15,7 +15,7 @@ import img4 from "../components/camara-img/4.jpg";
 import img5 from "../components/camara-img/5.jpg";
 import img6 from "../components/camara-img/6.jpg";
 import Gif from "@/components/Gif";
-
+import Forms from "@/components/Forms";
 
 export default function Camara() {
   return (
@@ -33,6 +33,8 @@ export default function Camara() {
         <Hero />
         <Schedule />
       </ReactLenis>
+
+      
     </div>
   );
 };
@@ -181,9 +183,9 @@ const Schedule = () => {
       >
        Prolenz Studios 
       </motion.h1>
-      <ScheduleItem title="Wedding " date="Dec 9th" location="Florida" />
-      <ScheduleItem title="Branding Shoots" date="Dec 20th" location="Texas" />
-      <ScheduleItem title="Animations " date="Jan 13th" location="Florida" />
+      <ScheduleItem title="Brand Shoots " date="Dec 9th" location="Florida" />
+      <ScheduleItem title="Product Shoots" date="Dec 20th" location="Texas" />
+      <ScheduleItem title="Event Shoots " date="Jan 13th" location="Florida" />
       <ScheduleItem title="Professtion Shoots" date="Feb 22nd" location="Florida" />
       <ScheduleItem title="Pre Wedding" date="Mar 1st" location="California" />
       <ScheduleItem title="Couple Shoots " date="Mar 8th" location="California" />
@@ -191,6 +193,7 @@ const Schedule = () => {
 
      
     </section>
+    <Forms className="pb-5"/>
      <Gif/>
      </>
   );
@@ -207,10 +210,10 @@ const ScheduleItem = ({ title, date, location }) => {
     >
       <div>
         <p className="mb-1.5 text-xl text-zinc-50">{title}</p>
-        <p className="text-sm uppercase text-zinc-500">{date}</p>
+        {/* <p className="text-sm uppercase text-zinc-500">{date}</p> */}
       </div>
       <div className="flex items-center gap-1.5 text-end text-sm uppercase text-zinc-500">
-        <p>{location}</p>
+        {/* <p>{location}</p> */}
         <FiMapPin />
       </div>
     </motion.div>

@@ -165,12 +165,7 @@ export default function About() {
         with Simple AI Tools
       </h1>
     </div>
-           
-         
           </div>
-         
-      
-      
         </div>
       </main>
     </div>

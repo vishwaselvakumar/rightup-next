@@ -5,15 +5,15 @@ import "swiper/css/navigation";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { useRef } from "react";
 import { motion } from "framer-motion";
-import Link from "next/link"; // For Next.js routing
+import Link from "next/link";
 
 const services = [
-  { title: "Custom Software Development", description: "Software development is the process of designing, coding, testing, and maintaining applications or systems to meet specific user needs. It encompasses various methodologies, programming languages", buttonText: "Get Started", link: "/services/software" },
-  { title: "Web & Mobile App Development", description: " Mobile app development is the process of creating software applications that run on mobile devices. It involves various stages, including planning, designing, coding, testing, and deployment", buttonText: "Explore More", link: "/services/app" },
-  { title: "E-commerce Solutions", description: "E-commerce mobile app development is the process of creating software applications that facilitate online buying and selling. These apps provide users with a seamless shopping experience", buttonText: "Start Selling", link: "/services/ecommerce" },
-  { title: "Digital Marketing & SEO", description: "friendly content for a website requires a balance of keyword optimization, user engagement, and valuable information. Below is a general SEO content structure tailored for your website", buttonText: "Optimize Now", link: "/services/digital" },
-  { title: "College & Academic Projects", description: "platform designed to help students find internships in their field of interest. We bridge the gap between students and companies, ensuring seamless connections for career growth", buttonText: "Learn More", link: "/services/studies" },
-  { title: "AI & Data Analytics", description: "Artificial Intelligence (AI) is revolutionizing software development by enabling automation, enhancing decision-making, and improving user experiences.", buttonText: "Discover AI", link: "services/ai" }
+  { title: "Software Development", description: "Transform your business with tailor-made software solutions designed to meet your unique needs.", buttonText: "Get Started", link: "/services/software" },
+  { title: "Web &  App Development", description: "Build powerful, scalable, and user-friendly applications with our custom web and mobile app development services.", buttonText: "Explore More", link: "/services/app" },
+  { title: "E-commerce Solutions", description: "Take your online business to the next level with custom e-commerce solutions that ensure seamless shopping experiences.", buttonText: "Start Selling", link: "/services/ecommerce" },
+  { title: "Digital Marketing & SEO", description: "Boost your online presence with strategic SEO and data-driven digital marketing for better visibility and growth.", buttonText: "Optimize Now", link: "/services/digital" },
+  { title: "College & Academic Projects", description: "A platform designed to help students find internships and build a strong foundation for their careers.", buttonText: "Learn More", link: "/services/studies" },
+  { title: "AI & Data Analytics", description: "Harness AI and Data Analytics to drive smarter decisions, automate processes, and enhance user experiences.", buttonText: "Discover AI", link: "/services/ai" }
 ];
 
 const Carousel = () => {
@@ -28,14 +28,19 @@ const Carousel = () => {
   };
 
   return (
-    <div className="w-[90%] relative px-20 justify-center items-center mx-auto">
+    <div className="w-full px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-20 relative flex justify-center items-center mx-auto">
       <Swiper
         modules={[Navigation, Autoplay]}
         spaceBetween={20}
-        slidesPerView={2}
-        autoplay={{ delay: 3000, disableOnInteraction: false, reverseDirection: true }}
-        dir="rtl"
-        className="multiple-slide-carousel"
+        slidesPerView={1}
+        breakpoints={{
+          480: { slidesPerView: 1 },
+          640: { slidesPerView: 2 },
+          1024: { slidesPerView: 3 },
+          1280: { slidesPerView: 4 }
+        }}
+        autoplay={{ delay: 3000, disableOnInteraction: false }}
+        className="multiple-slide-carousel w-full"
         onSwiper={(swiper) => (swiperRef.current = swiper)}
       >
         {services.map((service, index) => (
@@ -44,11 +49,11 @@ const Carousel = () => {
               initial={{ opacity: 0, y: 50 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: index * 0.2 }}
-              className="bg-gradient-to-b from-blue-500 to-blue-700 shadow-xl rounded-2xl h-96 flex flex-col justify-center items-center p-6 border border-blue-300 text-white"
+              className="bg-gradient-to-b from-blue-500 to-blue-700 shadow-xl rounded-2xl flex flex-col justify-between items-center p-6 border border-blue-300 text-white text-center w-full h-[250px] sm:h-[300px] md:h-[350px] lg:h-[400px]"
             >
-              <h3 className="text-3xl font-bold mb-2 text-center justify-center items-center">{service.title}</h3>
-              <p className="text-blue-100 text-lg text-center mb-4 justify-center items-center mt-8">{service.description}</p>
-              <Link className="mt-10" href={service.link}>
+              <h3 className="text-xl sm:text-2xl md:text-lg font-bold mt-5">{service.title}</h3>
+              <p className="text-blue-100 text-sm sm:text-base md:text-lg flex-grow flex items-center justify-center px-2">{service.description}</p>
+              <Link href={service.link} className="mt-auto">
                 <motion.button
                   whileHover={{ scale: 1.1 }}
                   whileTap={{ scale: 0.9 }}
@@ -62,24 +67,24 @@ const Carousel = () => {
         ))}
       </Swiper>
 
-      <div className="flex justify-center items-center left-5 right-5 mt-5 mb-5">
-        <motion.button
-          onClick={scrollRight}
-          whileHover={{ scale: 1.2 }}
-          whileTap={{ scale: 0.9 }}
-          className="group p-2 flex justify-center items-center border border-blue-500 w-12 h-12 transition-all duration-500 rounded-full hover:bg-blue-600 -translate-x-16"
-        >
-          <ChevronLeft className="h-5 w-5 text-blue-500 group-hover:text-white" />
-        </motion.button>
-        <motion.button
-          onClick={scrollLeft}
-          whileHover={{ scale: 1.2 }}
-          whileTap={{ scale: 0.9 }}
-          className="group p-2 flex justify-center items-center border border-blue-500 w-12 h-12 transition-all duration-500 rounded-full hover:bg-blue-600 translate-x-16"
-        >
-          <ChevronRight className="h-5 w-5 text-blue-500 group-hover:text-white" />
-        </motion.button>
-      </div>
+      {/* Navigation Buttons */}
+      <motion.button
+        onClick={scrollLeft}
+        whileHover={{ scale: 1.2 }}
+        whileTap={{ scale: 0.9 }}
+        className="group p-2 absolute left-2 sm:left-4 top-1/2 transform -translate-y-1/2 border border-blue-500 w-10 h-10 sm:w-12 sm:h-12 transition-all duration-500 rounded-full hover:bg-blue-600"
+      >
+        <ChevronLeft className="h-5 w-5 text-blue-500 group-hover:text-white" />
+      </motion.button>
+      
+      <motion.button
+        onClick={scrollRight}
+        whileHover={{ scale: 1.2 }}
+        whileTap={{ scale: 0.9 }}
+        className="group p-2 absolute right-2 sm:right-4 top-1/2 transform -translate-y-1/2 border border-blue-500 w-10 h-10 sm:w-12 sm:h-12 transition-all duration-500 rounded-full hover:bg-blue-600"
+      >
+        <ChevronRight className="h-5 w-5 text-blue-500 group-hover:text-white" />
+      </motion.button>
     </div>
   );
 };

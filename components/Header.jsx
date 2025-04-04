@@ -2,6 +2,8 @@ import { useState, useEffect, useRef } from "react";
 import { useRouter } from "next/router";
 import { useTheme } from "next-themes";
 import Link from "next/link";
+import Image from "next/image";
+import logo from "@/public/logos/partner/logo.png"
 
 const Header = () => {
   const { systemTheme, theme, setTheme } = useTheme();
@@ -19,12 +21,12 @@ const Header = () => {
       dropdown: true,
       subLinks: [
         { name: "Software Development ", link: "/services/software" },
-        { name: "App Development ", link: "/services/app" },
+        { name: "Web & App Development ", link: "/services/app" },
         { name: "Digital Marketing", link: "/services/digital" },
-        { name: "Brand Shoot", link: "/services/camara" },
+        { name: "Brand Shoots", link: "/services/camara" },
         { name: "AI / ML ", link: "/services/ai" },
         { name: "Tranning", link: "/colleges" },
-        { name: "Works", link: "/work" },
+  
       ],
     },
     { name: "Tech", link: "/tech" },
@@ -52,11 +54,12 @@ const Header = () => {
   const currentTheme = theme === "system" ? systemTheme : theme;
 
   return (
-    <nav ref={touchRef} className="sticky top-0 left-0 w-full z-50 bg-blue-700 shadow-md transition-all duration-300">
+    <nav ref={touchRef}className="sticky top-0 left-0 w-full z-50 bg-gradient-to-r from-blue-400 to-blue-900 shadow-md transition-all duration-300" >
+  
       <div className="flex justify-between items-center py-4 px-6 md:px-10">
         <div className="text-white text-xl font-bold cursor-pointer">
           <Link href="/">
-            <h1>Right UpNext Innovations</h1>
+           <Image src={logo} alt="added" width={200} height={200}/>
           </Link>
         </div>
 

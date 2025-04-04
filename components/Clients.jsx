@@ -13,7 +13,7 @@ import brand8 from '@/public/logos/partner/sn-silk.png';
 
 const brandData = [
   { id: 1, img: brand1, text: 'Buddies Cart', width: 180, height: 70 },
-  { id: 2, img: brand2, text: 'Dhyana', width: 140, height: 120 },
+  { id: 2, img: brand2, text: 'Dhyana', width: 140, height: 70 },
   { id: 3, img: brand3, text: 'Dream Wheel Motors', width: 160, height: 80 },
   { id: 4, img: brand4, text: 'Gameboy Menswear', width: 130, height: 65 },
   { id: 5, img: brand5, text: 'Loans', width: 145, height: 72 },

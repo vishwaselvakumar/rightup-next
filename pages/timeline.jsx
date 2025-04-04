@@ -8,6 +8,25 @@ import Image from "next/image";
 
 const Timeline = () => {
 
+
+  <Head>
+      <title>Best GST Billing Software for Small Businesses & Shops</title>
+      <meta name="description" content="Get the best billing and invoicing software with GST for small businesses, retail shops, and restaurants. Try our free automated billing software today!" />
+      <meta name="keywords" content="GST Billing Software, Best Billing Software, Billing and Invoicing Software, Free Billing Software, Retail Billing Software, Billing Software for Shops, Billing Software for Restaurants" />
+      <meta name="author" content="Your Company Name" />
+      <meta name="robots" content="index, follow" />
+      <meta property="og:title" content="Best GST Billing Software for Small Businesses & Shops" />
+      <meta property="og:description" content="Get the best billing and invoicing software with GST for small businesses, retail shops, and restaurants. Try our free automated billing software today!" />
+      <meta property="og:type" content="website" />
+      <meta property="og:url" content="https://yourwebsite.com" />
+      <meta property="og:image" content="https://yourwebsite.com/og-image.jpg" />
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:title" content="Best GST Billing Software for Small Businesses & Shops" />
+      <meta name="twitter:description" content="Get the best billing and invoicing software with GST for small businesses, retail shops, and restaurants. Try our free automated billing software today!" />
+      <meta name="twitter:image" content="https://yourwebsite.com/twitter-image.jpg" />
+    </Head>
+
+
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({ target: ref, offset: ["start end", "end start"] });
 
@@ -107,12 +126,12 @@ const Timeline = () => {
       
       <div className="flex flex-col items-center  lg:mt-28 overflow-hidden mb-10 min-w-full mt-10">
     <motion.h1
-      className="text-3xl sm:text-6xl lg:text-7xl text-center tracking-wide inline-flex items-center min-w-full px-10"
+      className="text-xl sm:text-6xl lg:text-5xl text-center tracking-wide inline-flex items-center min-w-full px-10"
       style={{ transform: `scale(${scale})` }}
     >
-      Account  Your Products{" "}
+     Billing Today account Today{" "}
       <span className="bg-gradient-to-r from-yellow-500 to-blue-800 text-transparent bg-clip-text ml-2">
-        with Biller X
+      Grow your business Today
       </span>
     </motion.h1>
   </div>
@@ -137,7 +156,7 @@ const Timeline = () => {
       </div>
       <div className="mt-6 sm:mt-8 lg:mt-0">
         <h1 className="text-xl font-semibold text-gray-900 sm:text-2xl dark:text-white">
-          Killer Billing Solution by Right UpNext
+        Simplify Billing. Boost Your Business
         </h1>
         <div className="mt-4 sm:items-center sm:gap-4 sm:flex">
           <p className="text-2xl font-extrabold text-gray-900 sm:text-3xl dark:text-white">
@@ -299,9 +318,11 @@ const Timeline = () => {
         Effortless Billing. Smart Business.
         </p>
         <p className="text-black  text-xl">
-        Say goodbye to manual invoicing and hello to seamless, error-free billing. RightUp Next 
-        Innovation brings you the smartest PC Billing Software 
-        designed to streamline your sales, invoices, and inventory management—all in one place.
+       
+        Ditch manual invoicing and embrace hassle-free billing! RightUp Next Innovations presents
+        an intelligent PC Billing Software that automates your sales, invoices, and inventory—saving
+        you time and ensuring accuracy. Fast, efficient, and effortless.
+
         </p>
       </div>
     </div>

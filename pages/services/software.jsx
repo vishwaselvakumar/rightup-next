@@ -11,10 +11,12 @@ const software = () => {
   <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
     <div className="mb-14 text-center">
       <h2 className="text-4xl text-center font-bold text-gray-900 leading-[3.25rem] mb-6 max-w-max lg:max-w-3xl lg:mx-auto">
-        Developed from scratch for seamless online functionality
+      Custom Software Development for Scalable & Smart Solutions
       </h2>
       <p className="text-base font-normal text-gray-500 lg:max-w-2xl lg:mx-auto mb-8">
-        Using technology to make finance simpler, smarter and more rewarding.{" "}
+      At RightUp Next Innovations, we specialize in developing custom software solutions tailored to your
+business needs. Whether you need a web application, mobile app, enterprise software, or cloudbased platform, our expert team ensures seamless development, high performance, and scalable
+solutions.{" "}
       </p>
       {/* <div className="flex flex-col justify-center md:flex-row gap-5 max-w-lg mx-auto md:max-w-2xl lg:max-w-full">
         <a
@@ -356,13 +358,14 @@ const software = () => {
               </div>
             </div>
             <div className="ml-4">
+            <h4 className="text-lg font-medium leadi ">
+            Our Expertise in Software Development
+            </h4>
               <h4 className="text-lg font-medium leadi ">
-                Advanced Learning Algorithms
+              Web Application Development
               </h4>
               <p className="mt-2 ">
-                Discover our improved learning algorithms that adapt to your
-                preferences and provide even more personalized learning
-                suggestions.
+              High-performance and scalable web solutions.
               </p>
             </div>
           </div>
@@ -389,11 +392,10 @@ const software = () => {
             </div>
             <div className="ml-4">
               <h4 className="text-lg font-medium leadi ">
-                Interactive Learning Resources
+              Mobile App Development
               </h4>
               <p className="mt-2 ">
-                Access an extensive library of interactive resources that make
-                your learning journey engaging and interactive.
+              Android, iOS, and cross-platform mobile applications.
               </p>
             </div>
           </div>
@@ -419,7 +421,7 @@ const software = () => {
             </div>
             <div className="ml-4">
               <h4 className="text-lg font-medium leadi ">
-                Enhanced Video Streaming
+                API & System Integration
               </h4>
               <p className="mt-2 ">
                 Experience seamless video integration with enhanced streaming
@@ -451,12 +453,45 @@ const software = () => {
             </div>
             <div className="ml-4">
               <h4 className="text-lg font-medium leadi ">
-                Advanced Quiz Generation{" "}
+              Cloud-Based Solutions{" "}
               </h4>
               <p className="mt-2 ">
-                Take your knowledge testing to the next level with advanced quiz
-                generation, providing more customization options for your
-                quizzes.
+              SaaS applications and cloud migration services.
+
+              </p>
+            </div>
+          </div>
+
+
+
+          <div className="flex">
+            <div className="flex-shrink-0">
+              <div className="flex items-center justify-center w-12 h-12 rounded-md">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width={24}
+                  height={24}
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth={2}
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  className="lucide lucide-file-question"
+                >
+                  <path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z" />
+                  <path d="M10 10.3c.2-.4.5-.8.9-1a2.1 2.1 0 0 1 2.6.4c.3.4.5.8.5 1.3 0 1.3-2 2-2 2" />
+                  <path d="M12 17h.01" />
+                </svg>
+              </div>
+            </div>
+            <div className="ml-4">
+              <h4 className="text-lg font-medium leadi ">
+              AI & Data Analytics {" "}
+              </h4>
+              <p className="mt-2 ">
+              Smart automation and data-driven insights
+
               </p>
             </div>
           </div>

@@ -49,7 +49,7 @@ const Contact = () => {
                     Contact Us
                   </span>
                   <h2 class="text-black mb-6 text-lg font-bold uppercase sm:text-[40px] lg:text-[36px] xl:text-[55px]">
-                    GET IN TOUCH WITH US
+                    GET IN TOUCH 
                   </h2>
                   <p class="text-gray-700 mb-9 text-base leading-relaxed">
                   Join us on our journey as a leading IT and digital company,
